@@ -27,6 +27,8 @@ npm run preview
 - Texte principal: `src/App.tsx`
 - Design et couleurs: `src/styles.css`
 - Visuel hero provisoire: `public/placeholder-app.svg`
+- Page support: `support.html` + `src/SupportPage.tsx`
+- Page confidentialité: `confidentialite.html` + `src/ConfidentialitePage.tsx`
 
 Vous pouvez remplacer le visuel provisoire par vos captures réelles (par exemple `public/hero-reactif.png`) puis modifier la ligne CSS:
 
@@ -49,6 +51,12 @@ Dans GitHub:
 2. Source: `GitHub Actions`
 
 Le workflow déploiera automatiquement à chaque push sur `main`.
+
+## Pages disponibles
+
+- `/` : page vitrine principale
+- `/support` : centre de support (contenu spoof de démonstration)
+- `/confidentialite` : politique de confidentialité (contenu spoof de démonstration)
 
 ## DNS et domaine personnalisé
 

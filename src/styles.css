@@ -250,6 +250,28 @@ details p {
   color: var(--muted);
 }
 
+.footer a,
+.card a {
+  color: #b8c8ff;
+}
+
+.legal-page {
+  padding-bottom: 3rem;
+}
+
+.legal-page h1 {
+  margin: 0.4rem 0 0.8rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+}
+
+.legal-intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 70ch;
+}
+
 @media (max-width: 1024px) {
   .hero {
     grid-template-columns: 1fr;

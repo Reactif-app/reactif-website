@@ -65,7 +65,8 @@ function App() {
           <a href="#accueil">Accueil</a>
           <a href="#fonctionnalites">Fonctionnalités</a>
           <a href="#histoire">Le projet</a>
-          <a href="#confidentialite">Confidentialité</a>
+          <a href="/support">Support</a>
+          <a href="/confidentialite">Confidentialité</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
         </div>
@@ -164,6 +165,9 @@ function App() {
         <div>
           <h2>Prêt à déployer RéACTIF ?</h2>
           <p>Contact projet, démonstration et collaboration clinique/technique.</p>
+          <p>
+            Pages utiles: <a href="/support">/support</a> • <a href="/confidentialite">/confidentialite</a>
+          </p>
         </div>
         <a className="btn" href="mailto:contact@reactif.app">
           contact@reactif.app
