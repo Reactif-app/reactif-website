@@ -7,8 +7,7 @@ function ConfidentialitePage() {
 
       <nav className="navbar">
         <div className="brand">
-          <div className="brand__dot" aria-hidden="true" />
-          <span>RéACTIF</span>
+          <img src="/banner_logo.png" alt="RéACTIF" className="brand__logo" />
         </div>
         <div className="navlinks">
           <a href="/">Accueil</a>

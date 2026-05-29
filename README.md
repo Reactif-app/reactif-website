@@ -55,8 +55,8 @@ Le workflow déploiera automatiquement à chaque push sur `main`.
 ## Pages disponibles
 
 - `/` : page vitrine principale
-- `/support` : centre de support (contenu spoof de démonstration)
-- `/confidentialite` : politique de confidentialité (contenu spoof de démonstration)
+- `/support` : centre de support
+- `/confidentialite` : politique de confidentialité
 
 ## DNS et domaine personnalisé
 

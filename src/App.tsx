@@ -52,20 +52,13 @@ const faq = [
 function App() {
   return (
     <>
-      <header className="topbar">
-        <p>Projet en développement • Démo vitrine RéACTIF</p>
-      </header>
-
       <nav className="navbar">
         <div className="brand">
-          <div className="brand__dot" aria-hidden="true" />
-          <span>RéACTIF</span>
+          <img src="/banner_logo.png" alt="RéACTIF" className="brand__logo" />
         </div>
         <div className="navlinks">
-          <a href="#accueil">Accueil</a>
           <a href="#fonctionnalites">Fonctionnalités</a>
-          <a href="#histoire">Le projet</a>
-          <a href="/support">Support</a>
+
           <a href="/confidentialite">Confidentialité</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
@@ -92,46 +85,57 @@ function App() {
           </div>
           <div className="hero__content">
             <p className="tag">APPLICATION MÉDICALE • TRAÇABILITÉ</p>
-            <h1>
-              Aide aux réanimations
-              <br />
-              <span>cardiaques en SMUR.</span>
-            </h1>
+            <img
+              src="/banner_logo.png"
+              alt="RéACTIF"
+              className="hero__title-logo"
+            />
             <p>
               RéACTIF accompagne les soignants pendant l'intervention en
               chronométrant automatiquement les délais entre adrénaline,
               cordarone et chocs, afin de réduire la charge mentale et de mieux
               focaliser l'attention sur le patient.
             </p>
-            <div className="store-grid" aria-label="Liens de téléchargement">
-              <a
-                className="store-btn"
-                href="https://play.google.com/store"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="store-btn__logo" aria-hidden="true">
-                  ▶
-                </span>
-                <span>
-                  <span className="store-btn__kicker">Disponible sur</span>
-                  <strong>Google Play</strong>
-                </span>
-              </a>
-              <a
-                className="store-btn"
-                href="https://www.apple.com/fr/app-store/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="store-btn__logo" aria-hidden="true">
-                  
-                </span>
-                <span>
-                  <span className="store-btn__kicker">Disponible sur</span>
-                  <strong>App Store</strong>
-                </span>
-              </a>
+            <div className="store-row" aria-label="Liens de téléchargement">
+              <img
+                className="store-row__appicon"
+                src="/icon.png"
+                alt="Icône RéACTIF"
+              />
+              <div className="store-grid">
+                <a
+                  className="store-btn"
+                  href="https://play.google.com/store"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>
+                    <span className="store-btn__kicker">Disponible sur</span>
+                    <strong>
+                      <span className="store-btn__storeicon" aria-hidden="true">
+                        ▶
+                      </span>
+                      Google Play
+                    </strong>
+                  </span>
+                </a>
+                <a
+                  className="store-btn"
+                  href="https://www.apple.com/fr/app-store/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>
+                    <span className="store-btn__kicker">Disponible sur</span>
+                    <strong>
+                      <span className="store-btn__storeicon" aria-hidden="true">
+                        
+                      </span>
+                      App Store
+                    </strong>
+                  </span>
+                </a>
+              </div>
             </div>
             <div className="cta-row">
               <a className="btn" href="#fonctionnalites">
