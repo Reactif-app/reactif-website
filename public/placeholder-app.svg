@@ -1,15 +1,44 @@
 <svg width="1280" height="860" viewBox="0 0 1280 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111B3A"/>
+      <stop offset="1" stop-color="#1E2D62"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1D2D58"/>
+      <stop offset="1" stop-color="#131D3A"/>
+    </linearGradient>
+  </defs>
+
   <rect width="1280" height="860" fill="#0F1831"/>
-  <rect x="90" y="110" width="880" height="560" rx="28" fill="#18244A" stroke="#6A82FF" stroke-opacity="0.45"/>
-  <rect x="130" y="160" width="360" height="430" rx="20" fill="#101A36"/>
-  <rect x="530" y="160" width="390" height="80" rx="14" fill="#2A3B78"/>
-  <rect x="530" y="260" width="390" height="120" rx="14" fill="#202E5E"/>
-  <rect x="530" y="400" width="390" height="120" rx="14" fill="#202E5E"/>
-  <rect x="530" y="540" width="390" height="120" rx="14" fill="#202E5E"/>
-  <rect x="820" y="380" width="360" height="420" rx="36" fill="#111B35" stroke="#8298FF" stroke-opacity="0.4"/>
-  <rect x="870" y="460" width="260" height="30" rx="10" fill="#3F62FF"/>
-  <rect x="870" y="510" width="215" height="24" rx="10" fill="#5A7DFF"/>
-  <rect x="870" y="550" width="240" height="24" rx="10" fill="#5A7DFF"/>
-  <circle cx="1000" cy="400" r="40" fill="#7F5AF0"/>
-  <text x="135" y="95" fill="#9DB2FF" font-family="Arial, sans-serif" font-size="34" font-weight="700">Aperçu interface RéACTIF</text>
+  <rect x="46" y="56" width="1188" height="748" rx="38" fill="url(#bg)" stroke="#6F87FF" stroke-opacity="0.35"/>
+
+  <!-- iPad mockup -->
+  <rect x="138" y="150" width="760" height="540" rx="34" fill="#0B1122" stroke="#7F96FF" stroke-opacity="0.45"/>
+  <rect x="172" y="186" width="692" height="468" rx="18" fill="url(#screen)"/>
+  <circle cx="518" cy="673" r="6" fill="#5D73D4"/>
+
+  <!-- iPad app UI blocks -->
+  <rect x="206" y="226" width="188" height="378" rx="16" fill="#111C38"/>
+  <rect x="420" y="226" width="404" height="62" rx="12" fill="#314A94"/>
+  <rect x="420" y="306" width="404" height="92" rx="12" fill="#202F5D"/>
+  <rect x="420" y="416" width="404" height="92" rx="12" fill="#202F5D"/>
+  <rect x="420" y="526" width="404" height="92" rx="12" fill="#202F5D"/>
+
+  <!-- iPhone mockup in front -->
+  <rect x="722" y="282" width="254" height="454" rx="42" fill="#0B1122" stroke="#8EA4FF" stroke-opacity="0.55"/>
+  <rect x="742" y="322" width="214" height="376" rx="26" fill="url(#screen)"/>
+  <rect x="805" y="300" width="88" height="10" rx="5" fill="#2F3F72"/>
+  <circle cx="848" cy="717" r="7" fill="#5D73D4"/>
+
+  <!-- iPhone UI blocks -->
+  <rect x="762" y="350" width="174" height="22" rx="8" fill="#4468E6"/>
+  <rect x="762" y="388" width="142" height="18" rx="8" fill="#5A7DFF"/>
+  <rect x="762" y="420" width="174" height="60" rx="10" fill="#243769"/>
+  <rect x="762" y="494" width="174" height="60" rx="10" fill="#243769"/>
+  <rect x="762" y="568" width="174" height="60" rx="10" fill="#243769"/>
+
+  <text x="172" y="126" fill="#9DB2FF" font-family="Arial, sans-serif" font-size="30" font-weight="700">
+    Aperçu iPad + iPhone (iOS)
+  </text>
 </svg>
