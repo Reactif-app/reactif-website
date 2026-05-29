@@ -5,10 +5,6 @@ function ConfidentialitePage() {
 
   return (
     <>
-      <header className="topbar">
-        <p>Engagement de confidentialité RéACTIF</p>
-      </header>
-
       <nav className={`navbar ${mobileMenuOpen ? "navbar--open" : ""}`}>
         <div className="brand">
           <img src="/banner_logo.png" alt="RéACTIF" className="brand__logo" />
@@ -31,7 +27,6 @@ function ConfidentialitePage() {
 
       <main className="legal-page">
         <section className="section" aria-labelledby="privacy-title">
-          <p className="eyebrow">Protection des données</p>
           <h1 id="privacy-title">Engagement de confidentialité</h1>
           <p className="legal-intro">
             RéACTIF s'engage à respecter la confidentialité de ses utilisateurs. L'application ne collecte aucune donnée

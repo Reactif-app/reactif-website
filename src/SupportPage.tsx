@@ -5,10 +5,6 @@ function SupportPage() {
 
   return (
     <>
-      <header className="topbar">
-        <p>Support RéACTIF</p>
-      </header>
-
       <nav className={`navbar ${mobileMenuOpen ? "navbar--open" : ""}`}>
         <div className="brand">
           <img src="/banner_logo.png" alt="RéACTIF" className="brand__logo" />
@@ -31,7 +27,6 @@ function SupportPage() {
 
       <main className="legal-page">
         <section className="section" aria-labelledby="support-title">
-          <p className="eyebrow">Aide & Assistance</p>
           <h1 id="support-title">Centre de support RéACTIF</h1>
           <p className="legal-intro">
             Pour toute demande, merci de nous contacter à l'adresse suivante.
