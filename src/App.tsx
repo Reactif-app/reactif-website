@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+const githubUrl = "https://github.com";
+
 const fonctionnalites = [
   {
     titre: "RCP adulte",
@@ -132,7 +134,7 @@ function App() {
         </div>
         <a
           className="btn btn--ghost nav-cta"
-          href="https://github.com"
+          href={githubUrl}
           target="_blank"
           rel="noreferrer"
         >
@@ -203,7 +205,11 @@ function App() {
               </div>
             </div>
             <p className="availability-note">
-              Gratuit, sans publicité, libre sous licence copyleft et ouvert.
+              Gratuit, sans publicité, libre sous licence copyleft et{" "}
+              <a href={githubUrl} target="_blank" rel="noreferrer">
+                ouvert sur GitHub
+              </a>
+              .
             </p>
             <div className="cta-row">
               <a className="btn" href="#fonctionnalites">

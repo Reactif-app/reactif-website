@@ -128,14 +128,9 @@ main,
 .hero__visual {
   grid-area: visual;
   min-height: 420px;
-  border-radius: 28px;
-  background: linear-gradient(160deg, rgba(0, 125, 255, 0.08), rgba(234, 184, 34, 0.08));
-  border: 1px solid var(--stroke);
-  box-shadow: 0 18px 40px rgba(67, 67, 67, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
 }
 
 .hero__visual img {
@@ -144,7 +139,6 @@ main,
   max-height: 404px;
   object-fit: contain;
   object-position: center;
-  border-radius: 20px;
 }
 
 .tag,
@@ -243,6 +237,10 @@ main,
   color: var(--text);
   font-size: 1rem;
   font-weight: 700;
+}
+
+.availability-note a {
+  color: #007dff;
 }
 
 .section {
@@ -449,6 +447,16 @@ details p {
     flex-direction: column;
     gap: 1rem;
     padding-top: 0;
+  }
+
+  .hero__visual {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__visual img {
+    display: block;
+    margin-inline: auto;
   }
 
   .hero__banner {
