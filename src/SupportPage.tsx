@@ -24,8 +24,8 @@ function SupportPage() {
         </button>
         <div className="navlinks">
           <a href="/" onClick={() => setMobileMenuOpen(false)}>Accueil</a>
-          <a href="/support" onClick={() => setMobileMenuOpen(false)}>Support</a>
-          <a href="/confidentialite" onClick={() => setMobileMenuOpen(false)}>Confidentialité</a>
+          <a href="/support/" onClick={() => setMobileMenuOpen(false)}>Support</a>
+          <a href="/confidentialite/" onClick={() => setMobileMenuOpen(false)}>Confidentialité</a>
         </div>
       </nav>
 

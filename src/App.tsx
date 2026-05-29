@@ -2,7 +2,7 @@ const fonctionnalites = [
   {
     titre: "RCP adulte",
     texte:
-      "Compteurs adrénaline/cordarone/chocs, minuteurs codés couleur, minuteur d'analyse, événements annexes, aides de calcul, métronome, annulation haptique, gestion RACS et export PDF.",
+      "Timer et compteurs pour les chocs et les médicaments, saisie des  événements annexes, aide de calcul pour le réglage du respirateur, métronome, annulation haptique, gestion de la RACS, historique des évènements horodaté et export PDF.",
   },
   {
     titre: "RCP pédiatrique",
@@ -12,7 +12,7 @@ const fonctionnalites = [
   {
     titre: "RCP néonatale",
     texte:
-      "Version adaptée aux nourrissons avec suppression de la cordarone (minuteur/compteur) et ajout d'un minuteur dédié au remplissage vasculaire.",
+      "Version adaptée à la réanimation du nouveau né avec timer bloqué à 30 secondes pour l'analyse de la fréquence cardiaque et un compteur d'adrénaline et de remplissage vasculaire si indiqué.",
   },
 ];
 
@@ -72,7 +72,7 @@ function App() {
             Fonctionnalités
           </a>
 
-          <a href="/confidentialite" onClick={() => setMobileMenuOpen(false)}>
+          <a href="/confidentialite/" onClick={() => setMobileMenuOpen(false)}>
             Confidentialité
           </a>
           <a href="#faq" onClick={() => setMobileMenuOpen(false)}>
@@ -81,7 +81,7 @@ function App() {
           <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
             Contact
           </a>
-          <a href="/support" onClick={() => setMobileMenuOpen(false)}>
+          <a href="/support/" onClick={() => setMobileMenuOpen(false)}>
             Support
           </a>
         </div>
@@ -115,10 +115,11 @@ function App() {
           </div>
           <div className="hero__content">
             <p>
-              RéACTIF accompagne les soignants pendant l'intervention en
-              chronométrant automatiquement les délais entre adrénaline,
-              cordarone et chocs, afin de réduire la charge mentale et de mieux
-              focaliser l'attention sur le patient.
+              RéACTIF est une aide cognitive de type time keeper qui accompagne
+              les équipes de soin lors des réanimations cardio-pulmonaire ( RCP)
+              spécialisée. Cette application intègre les timers nécessaires pour
+              la gestion précise des délais recommandés concernant l'analyse du
+              rythme et l'administration des traitements.
             </p>
             <div className="store-row" aria-label="Liens de téléchargement">
               <img
