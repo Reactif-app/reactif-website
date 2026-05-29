@@ -50,21 +50,43 @@ const faq = [
 ];
 
 function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar ${mobileMenuOpen ? "navbar--open" : ""}`}>
         <div className="brand">
           <img src="/banner_logo.png" alt="RéACTIF" className="brand__logo" />
         </div>
+        <button
+          className="nav-toggle"
+          type="button"
+          aria-expanded={mobileMenuOpen}
+          aria-label="Ouvrir le menu"
+          onClick={() => setMobileMenuOpen((open) => !open)}
+        >
+          Menu
+        </button>
         <div className="navlinks">
-          <a href="#fonctionnalites">Fonctionnalités</a>
+          <a href="#fonctionnalites" onClick={() => setMobileMenuOpen(false)}>
+            Fonctionnalités
+          </a>
 
-          <a href="/confidentialite">Confidentialité</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
+          <a href="/confidentialite" onClick={() => setMobileMenuOpen(false)}>
+            Confidentialité
+          </a>
+          <a href="#faq" onClick={() => setMobileMenuOpen(false)}>
+            FAQ
+          </a>
+          <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
+            Contact
+          </a>
+          <a href="/support" onClick={() => setMobileMenuOpen(false)}>
+            Support
+          </a>
         </div>
         <a
-          className="btn btn--ghost"
+          className="btn btn--ghost nav-cta"
           href="https://github.com"
           target="_blank"
           rel="noreferrer"
@@ -75,6 +97,14 @@ function App() {
 
       <main>
         <section className="hero" id="accueil">
+          <div className="hero__banner">
+            <p className="tag">ASSISTANT RCP</p>
+            <img
+              src="/banner_logo.png"
+              alt="RéACTIF"
+              className="hero__title-logo"
+            />
+          </div>
           <div className="hero__visual">
             <img
               src="/website_screenshot.png"
@@ -84,12 +114,6 @@ function App() {
             />
           </div>
           <div className="hero__content">
-            <p className="tag">APPLICATION MÉDICALE • TRAÇABILITÉ</p>
-            <img
-              src="/banner_logo.png"
-              alt="RéACTIF"
-              className="hero__title-logo"
-            />
             <p>
               RéACTIF accompagne les soignants pendant l'intervention en
               chronométrant automatiquement les délais entre adrénaline,
@@ -233,3 +257,4 @@ function App() {
 }
 
 export default App;
+import { useState } from "react";

@@ -1,18 +1,31 @@
+import { useState } from "react";
+
 function ConfidentialitePage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <>
       <header className="topbar">
         <p>Confidentialité RéACTIF</p>
       </header>
 
-      <nav className="navbar">
+      <nav className={`navbar ${mobileMenuOpen ? "navbar--open" : ""}`}>
         <div className="brand">
           <img src="/banner_logo.png" alt="RéACTIF" className="brand__logo" />
         </div>
+        <button
+          className="nav-toggle"
+          type="button"
+          aria-expanded={mobileMenuOpen}
+          aria-label="Ouvrir le menu"
+          onClick={() => setMobileMenuOpen((open) => !open)}
+        >
+          Menu
+        </button>
         <div className="navlinks">
-          <a href="/">Accueil</a>
-          <a href="/support">Support</a>
-          <a href="/confidentialite">Confidentialité</a>
+          <a href="/" onClick={() => setMobileMenuOpen(false)}>Accueil</a>
+          <a href="/support" onClick={() => setMobileMenuOpen(false)}>Support</a>
+          <a href="/confidentialite" onClick={() => setMobileMenuOpen(false)}>Confidentialité</a>
         </div>
       </nav>
 
