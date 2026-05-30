@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const githubUrl = "https://github.com";
+const githubUrl = "https://github.com/Reactif-app/reactif";
 
 const fonctionnalites = [
   {
@@ -176,7 +176,7 @@ function App() {
               <div className="store-grid">
                 <a
                   className="store-btn"
-                  href="https://play.google.com/store"
+                  href="https://play.google.com/store/apps/details?id=fr.reactif"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -205,7 +205,15 @@ function App() {
               </div>
             </div>
             <p className="availability-note">
-              Gratuit, sans publicité, libre sous licence copyleft et{" "}
+              Gratuit, sans publicité, libre sous{" "}
+              <a
+                href="https://github.com/Reactif-app/reactif/blob/main/LICENCE-fr"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <u>licence copyleft</u>
+              </a>{" "}
+              et{" "}
               <a href={githubUrl} target="_blank" rel="noreferrer">
                 ouvert sur GitHub
               </a>

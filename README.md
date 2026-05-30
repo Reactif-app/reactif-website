@@ -58,6 +58,10 @@ Le workflow déploiera automatiquement à chaque push sur `main`.
 - `/support` : centre de support
 - `/confidentialite` : politique de confidentialité
 
+## Documentation API
+
+- Voir `API.md` pour la documentation de la surface HTTP actuelle (routes statiques et comportements réseau).
+
 ## DNS et domaine personnalisé
 
 ### Option A - sous-domaine (`www.reactif.app`)
