@@ -190,7 +190,7 @@ function App() {
                 </a>
                 <a
                   className="store-btn"
-                  href="https://www.apple.com/fr/app-store/"
+                  href="https://apps.apple.com/app/r%C3%A9actif/id6768908796"
                   target="_blank"
                   rel="noreferrer"
                 >
