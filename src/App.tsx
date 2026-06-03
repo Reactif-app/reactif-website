@@ -1,70 +1,7 @@
 import { useState } from "react";
+import { LanguageToggle, useLanguage } from "./i18n";
 
 const githubUrl = "https://github.com/Reactif-app/reactif";
-
-const fonctionnalites = [
-  {
-    titre: "RCP adulte",
-    texte:
-      "Timer et compteurs pour les chocs et les médicaments, saisie des  événements annexes, aide de calcul pour le réglage du respirateur, métronome, annulation haptique, gestion de la RACS, historique des évènements horodaté et export PDF.",
-  },
-  {
-    titre: "RCP pédiatrique",
-    texte:
-      "Inclut toutes les options de la RCP adulte, avec en plus un calculateur de doses par âge/poids et un rappel des doses directement visible pendant l'intervention.",
-  },
-  {
-    titre: "RCP néonatale",
-    texte:
-      "Version adaptée à la réanimation du nouveau né avec timer bloqué à 30 secondes pour l'analyse de la fréquence cardiaque et un compteur d'adrénaline et de remplissage vasculaire si indiqué.",
-  },
-];
-
-const etapes = [
-  {
-    titre: "Le besoin terrain",
-    texte:
-      "Durant la réanimation cardio-pulmonaire, suivre précisément les délais recommandés entre les analyses et les médicaments ajoute une forte charge mentale aux soignants.",
-  },
-  {
-    titre: "La réponse RéACTIF",
-    texte:
-      "RéACTIF accompagne les équipes en chronométrant automatiquement les séquences clés de la RCP spécialisée.",
-  },
-  {
-    titre: "L'après-intervention",
-    texte:
-      "L'application permet  l'horodatage et la description précise du déroulé de la RCP pour faciliter la saisie des évènements dans le dossier médical et les registres. Cette chronologie précise s'avère aussi particulièrement utile pour l'amélioration des pratiques, le retour d'expérience et l'évaluation  lors du debriefing en equipe.",
-  },
-];
-
-const faq = [
-  {
-    q: "À qui s'adresse RéACTIF ?",
-    r: "RéACTIF est pensé pour toutes les équipes impliquées dans la RCP spécialisée en extra ou intra hospitalier.",
-  },
-  {
-    q: "L'application a-t-elle besoin d'Internet ?",
-    r: "Non. RéACTIF ne requiert aucun accès Internet pendant l'utilisation, ce qui la rend adaptée aux contextes d'urgence sur le terrain.",
-  },
-  {
-    q: "Quelles données sont collectées ?",
-    r: "Aucune donnée médicale ou personnelle n'est collectée. Les historiques de RCP sont stockés localement sur l'appareil et ne contiennent pas de données sensibles.",
-  },
-];
-
-const confidentialiteItems = [
-  {
-    titre: "Visée de recherche",
-    texte:
-      "RéACTIF permet la saisie en temps réel de l'ensemble des soins et techniques mobilisés tout au long de la RCP. L'outil permet donc de garantir la précision des horaires dans les protocoles de recherche et les registres.",
-  },
-  {
-    titre: "Données et conformité",
-    texte:
-      "L'application fonctionne sans Internet, ne collecte aucune donnée médicale ni personnelle et stocke l'historique uniquement en local. Les historiques ne contiennent pas de données sensibles.",
-  },
-];
 
 function PlayStoreIcon() {
   return (
@@ -98,6 +35,7 @@ function AppStoreIcon() {
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language, t, toggleLanguage } = useLanguage();
 
   return (
     <>
@@ -109,27 +47,27 @@ function App() {
           className="nav-toggle"
           type="button"
           aria-expanded={mobileMenuOpen}
-          aria-label="Ouvrir le menu"
+          aria-label={t.openMenu}
           onClick={() => setMobileMenuOpen((open) => !open)}
         >
-          Menu
+          {t.menu}
         </button>
         <div className="navlinks">
           <a href="#fonctionnalites" onClick={() => setMobileMenuOpen(false)}>
-            Fonctionnalités
+            {t.nav.features}
           </a>
 
           <a href="/confidentialite/" onClick={() => setMobileMenuOpen(false)}>
-            Confidentialité
+            {t.nav.privacy}
           </a>
           <a href="#faq" onClick={() => setMobileMenuOpen(false)}>
-            FAQ
+            {t.nav.faq}
           </a>
           <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
-            Contact
+            {t.nav.contact}
           </a>
           <a href="/support/" onClick={() => setMobileMenuOpen(false)}>
-            Support
+            {t.nav.support}
           </a>
         </div>
         <a
@@ -140,6 +78,12 @@ function App() {
         >
           GitHub
         </a>
+        <LanguageToggle
+          language={language}
+          label={t.languageToggleLabel}
+          title={t.languageToggleTitle}
+          onToggle={toggleLanguage}
+        />
       </nav>
 
       <main>
@@ -154,24 +98,18 @@ function App() {
           <div className="hero__visual">
             <img
               src="/website_screenshot.png"
-              alt="Capture de l'application RéACTIF sur iPad et iPhone"
+              alt={t.app.heroAlt}
               loading="eager"
               decoding="async"
             />
           </div>
           <div className="hero__content">
-            <p>
-              RéACTIF est une aide cognitive de type time keeper qui accompagne
-              les équipes de soin lors des réanimations cardio-pulmonaire ( RCP)
-              spécialisée. Cette application intègre les timers nécessaires pour
-              la gestion précise des délais recommandés concernant l'analyse du
-              rythme et l'administration des traitements.
-            </p>
-            <div className="store-row" aria-label="Liens de téléchargement">
+            <p>{t.app.intro}</p>
+            <div className="store-row" aria-label={t.app.downloadLinks}>
               <img
                 className="store-row__appicon"
                 src="/icon.png"
-                alt="Icône RéACTIF"
+                alt={t.app.appIconAlt}
               />
               <div className="store-grid">
                 <a
@@ -181,7 +119,9 @@ function App() {
                   rel="noreferrer"
                 >
                   <span>
-                    <span className="store-btn__kicker">Disponible sur</span>
+                    <span className="store-btn__kicker">
+                      {t.app.availableOn}
+                    </span>
                     <strong>
                       <PlayStoreIcon />
                       Google Play
@@ -195,7 +135,9 @@ function App() {
                   rel="noreferrer"
                 >
                   <span>
-                    <span className="store-btn__kicker">Disponible sur</span>
+                    <span className="store-btn__kicker">
+                      {t.app.availableOn}
+                    </span>
                     <strong>
                       <AppStoreIcon />
                       App Store
@@ -205,23 +147,23 @@ function App() {
               </div>
             </div>
             <p className="availability-note">
-              Gratuit, sans publicité, libre sous{" "}
+              {t.app.availabilityPrefix}{" "}
               <a
                 href="https://github.com/Reactif-app/reactif/blob/main/LICENCE-fr"
                 target="_blank"
                 rel="noreferrer"
               >
-                <u>licence copyleft</u>
+                <u>{t.app.copyleftLicense}</u>
               </a>{" "}
-              et{" "}
+              {t.app.availabilityAnd}{" "}
               <a href={githubUrl} target="_blank" rel="noreferrer">
-                ouvert sur GitHub
+                {t.app.githubOpen}
               </a>
               .
             </p>
             <div className="cta-row">
               <a className="btn" href="#fonctionnalites">
-                Voir les fonctionnalités
+                {t.app.viewFeatures}
               </a>
             </div>
           </div>
@@ -232,12 +174,12 @@ function App() {
           id="fonctionnalites"
           aria-labelledby="fonctionnalites-title"
         >
-          <h2 id="fonctionnalites-title">Fonctions principales</h2>
+          <h2 id="fonctionnalites-title">{t.app.mainFunctions}</h2>
           <div className="grid grid-3">
-            {fonctionnalites.map((item) => (
-              <article className="card" key={item.titre}>
-                <h3>{item.titre}</h3>
-                <p>{item.texte}</p>
+            {t.app.features.map((item) => (
+              <article className="card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
               </article>
             ))}
           </div>
@@ -248,12 +190,12 @@ function App() {
           id="histoire"
           aria-labelledby="histoire-title"
         >
-          <h2 id="histoire-title">L'histoire de RéACTIF</h2>
+          <h2 id="histoire-title">{t.app.storyTitle}</h2>
           <div className="grid grid-3">
-            {etapes.map((item) => (
-              <article className="card card--lift" key={item.titre}>
-                <h3>{item.titre}</h3>
-                <p>{item.texte}</p>
+            {t.app.steps.map((item) => (
+              <article className="card card--lift" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
               </article>
             ))}
           </div>
@@ -264,14 +206,12 @@ function App() {
           id="confidentialite"
           aria-labelledby="confidentialite-title"
         >
-          <h2 id="confidentialite-title">
-            Retour d'expérience et confidentialité
-          </h2>
+          <h2 id="confidentialite-title">{t.app.privacyTitle}</h2>
           <div className="grid grid-2">
-            {confidentialiteItems.map((item) => (
-              <article className="card" key={item.titre}>
-                <h3>{item.titre}</h3>
-                <p>{item.texte}</p>
+            {t.app.researchPrivacy.map((item) => (
+              <article className="card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
               </article>
             ))}
           </div>
@@ -280,10 +220,10 @@ function App() {
         <section className="section" id="faq" aria-labelledby="faq-title">
           <h2 id="faq-title">FAQ</h2>
           <div className="faq">
-            {faq.map((item) => (
-              <details key={item.q}>
-                <summary>{item.q}</summary>
-                <p>{item.r}</p>
+            {t.app.faq.map((item) => (
+              <details key={item.question}>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
               </details>
             ))}
           </div>
